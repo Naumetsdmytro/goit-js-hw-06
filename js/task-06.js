@@ -3,8 +3,8 @@ inputEl.addEventListener("blur", onInputBlur);
 
 function onInputBlur(event) {
   const input = event.target;
-  if (input.value.length >= Number(input.dataset.length)) {
-    // input.classList.remove("invalid");
+  if (input.value.length === Number(input.dataset.length)) {
+    input.classList.remove("invalid");
     input.classList.add("valid");
     return;
   }
